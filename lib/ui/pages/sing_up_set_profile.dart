@@ -73,7 +73,7 @@ class SignUpSetProfilePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'Shayna',
+                  'Numenide',
                   style: blackTextStyle.copyWith(
                     fontSize: 18,
                     fontWeight: medium,
@@ -83,6 +83,7 @@ class SignUpSetProfilePage extends StatelessWidget {
                 const CustomFormField(
                   title: 'Set PIN (6 digit number)',
                   obscureText: true,
+                  
                 ),
                 const SizedBox(height: 30),
                 CustomFilledButton(

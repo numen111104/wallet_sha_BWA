@@ -75,7 +75,6 @@ class SignInPage extends StatelessWidget {
               Navigator.pushNamed(context, '/sign-up');
             },
           ),
-          const SizedBox(height: 80),
         ],
       ),
     );

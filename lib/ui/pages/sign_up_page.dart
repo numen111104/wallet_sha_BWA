@@ -66,14 +66,14 @@ class SignUpPage extends StatelessWidget {
               ],
             ),
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 15),
           CustomTextButton(
             title: 'Sign In',
             onPressed: () {
               Navigator.pushNamed(context, '/sign-in');
             },
           ),
-          const SizedBox(height: 58),
+          const SizedBox(height: 25),
         ],
       ),
     );

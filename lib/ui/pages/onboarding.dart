@@ -37,6 +37,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                const SizedBox(height: 86),
                 CarouselSlider(
                   items: [
                     Image.asset(
@@ -53,6 +54,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     ),
                   ],
                   options: CarouselOptions(
+                    autoPlay: false,
                     enableInfiniteScroll: false,
                     viewportFraction: 1,
                     height: 331,
@@ -164,7 +166,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
           ),
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: currentIndex == 2 ? blueColor : lightBackgroundColor,
+            color: lightBackgroundColor,
           ),
         ),
         const Spacer(),
