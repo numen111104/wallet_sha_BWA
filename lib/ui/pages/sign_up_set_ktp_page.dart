@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wallet_sha/shared/theme.dart';
 import 'package:wallet_sha/ui/widgets/buttons.dart';
-import 'package:wallet_sha/ui/widgets/forms.dart';
 
-class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+class SignUpSetKtpPage extends StatelessWidget {
+  const SignUpSetKtpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class SignInPage extends StatelessWidget {
             ),
           ),
           Text(
-            'Sign In &\nGrow Your Finance',
+            'Verify Your\nAccount',
             style: blackTextStyle.copyWith(
               fontSize: 20,
               fontWeight: semiBold,
@@ -42,40 +41,45 @@ class SignInPage extends StatelessWidget {
               color: whiteColor,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const CustomFormField(
-                  title: 'Email Address',
-                ),
-                const SizedBox(height: 16),
-                const CustomFormField(
-                  title: 'Password',
-                  obscureText: true,
-                ),
-                const SizedBox(height: 8),
-                Align(
-                  alignment: Alignment.centerRight,
-                  child: Text(
-                    'Forgot Password',
-                    style: blueTextStyle,
+                Container(
+                  width: 120,
+                  height: 120,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: lightBackgroundColor,
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      'assets/ic_upload.png',
+                      width: 32,
+                    ),
                   ),
                 ),
-                const SizedBox(height: 30),
+                const SizedBox(height: 16),
+                Text(
+                  'Passport/ID Card',
+                  style: blackTextStyle.copyWith(
+                    fontSize: 18,
+                    fontWeight: medium,
+                  ),
+                ),
+                const SizedBox(height: 50),
                 CustomFilledButton(
-                  title: 'Sign In',
+                  title: 'Continue',
                   onPressed: () {},
                 )
               ],
             ),
           ),
-          const SizedBox(height: 50),
+          const SizedBox(height: 60),
           CustomTextButton(
-            title: 'Create New Account',
+            title: 'Skip for Now',
             onPressed: () {
-              Navigator.pushNamed(context, '/sign-up');
+              Navigator.pushNamed(context, '/sign-up-success');
             },
           ),
-          const SizedBox(height: 80),
+          const SizedBox(height: 81),
         ],
       ),
     );

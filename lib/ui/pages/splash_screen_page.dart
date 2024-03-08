@@ -35,7 +35,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
           decoration: const BoxDecoration(
             image: DecorationImage(
               image: AssetImage(
-                'assets/img_logo_light.png',
+                'assets/img_logo_dark.png',
               ),
             ),
           ),

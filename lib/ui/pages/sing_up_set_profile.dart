@@ -43,20 +43,20 @@ class SignUpSetProfilePage extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Container(
-                  width: 120,
-                  height: 120,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: lightBackgroundColor,
-                  ),
-                  child: Center(
-                    child: Image.asset(
-                      'assets/ic_upload.png',
-                      width: 32,
-                    ),
-                  ),
-                ),
+                // Container(
+                //   width: 120,
+                //   height: 120,
+                //   decoration: BoxDecoration(
+                //     shape: BoxShape.circle,
+                //     color: lightBackgroundColor,
+                //   ),
+                //   child: Center(
+                //     child: Image.asset(
+                //       'assets/ic_upload.png',
+                //       width: 32,
+                //     ),
+                //   ),
+                // ),
                 Container(
                   width: 120,
                   height: 120,
@@ -87,7 +87,9 @@ class SignUpSetProfilePage extends StatelessWidget {
                 const SizedBox(height: 30),
                 CustomFilledButton(
                   title: 'Continue',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/sign-up-set-ktp');
+                  },
                 )
               ],
             ),
