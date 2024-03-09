@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:wallet_sha/shared/methods.dart';
 import 'package:wallet_sha/shared/theme.dart';
 import 'package:wallet_sha/ui/widgets/home_service.dart';
+import 'package:wallet_sha/ui/widgets/home_tips.dart';
 import 'package:wallet_sha/ui/widgets/home_user_items.dart';
-import 'package:wallet_sha/ui/widgets/latest_transactions.dart';
+import 'package:wallet_sha/ui/widgets/home_latest_transactions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -89,6 +92,10 @@ class HomePage extends StatelessWidget {
           buildService(),
           buildLatestTransaction(),
           buildSendAgain(),
+          buildFriendlyTips(),
+          const SizedBox(
+            height: 50,
+          )
         ],
       ),
     );
@@ -135,8 +142,8 @@ class HomePage extends StatelessWidget {
             child: Align(
               alignment: Alignment.topRight,
               child: Container(
-                width: 16,
-                height: 16,
+                width: 14,
+                height: 14,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: whiteColor,
@@ -145,7 +152,7 @@ class HomePage extends StatelessWidget {
                   child: Icon(
                     Icons.check_circle,
                     color: blueCeklist,
-                    size: 16,
+                    size: 14,
                   ),
                 ),
               ),
@@ -163,7 +170,7 @@ class HomePage extends StatelessWidget {
       margin: const EdgeInsets.only(
         top: 30,
       ),
-      padding: const EdgeInsets.all(30),
+      padding: const EdgeInsets.only(top: 30, left: 30, bottom: 30),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(28),
         image: const DecorationImage(
@@ -192,7 +199,7 @@ class HomePage extends StatelessWidget {
               letterSpacing: 6,
             ),
           ),
-          const SizedBox(height: 26),
+          const SizedBox(height: 28),
           Text(
             'Balance',
             style: whiteTextStyle.copyWith(
@@ -452,6 +459,47 @@ class HomePage extends StatelessWidget {
                       imageUrl: 'assets/img_friend4.png', username: 'kiya'),
                 ],
               ),
+            )
+          ],
+        ),
+      );
+
+  Widget buildFriendlyTips() => Container(
+        margin: const EdgeInsets.only(top: 30),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Friendly Tips",
+              style: blackTextStyle.copyWith(
+                fontSize: 16,
+                fontWeight: semiBold,
+              ),
+            ),
+            const SizedBox(height: 14),
+            const Wrap(
+              spacing: 17,
+              runSpacing: 18,
+              children: [
+                HomeTipsItem(
+                  imageUrl: 'assets/img_tips1.png',
+                  title: 'Benefit when you use WSH card',
+                  url: 'https://google.com',
+                ),
+                HomeTipsItem(
+                    imageUrl: 'assets/img_tips4.png',
+                    title: 'Save more penny buy this instead',
+                    url: 'https://google.com'),
+                HomeTipsItem(
+                  imageUrl: 'assets/img_tips3.png',
+                  title: 'Spot the good pie of finance model',
+                  url: "ddd",
+                ),
+                HomeTipsItem(
+                    imageUrl: 'assets/img_tips2.png',
+                    title: 'Great hack to get better advices',
+                    url: 'https://google.com'),
+              ],
             )
           ],
         ),
